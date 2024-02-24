@@ -95,6 +95,8 @@ section{
 
 .home-content{
     max-width: 60rem;
+    z-index: 99;
+    
 }
 
 .home-content h1{
@@ -103,6 +105,10 @@ section{
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
+}
+
+.home-content h1 span{
+    color: var(--text-color);
 }
 
 .home-content .text-animate{
@@ -119,13 +125,15 @@ section{
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -33rem 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;;
 
 }
 
-.home.show-animate .home-content .text-animate h3{
+/*.home.show-animate .home-content .text-animate h3{
     animation: homeBgText 6s linear infinite;
     animation-delay: 2s;
-}
+}*/
 
 .home-content .text-animate h3::before{
     content: '';
@@ -136,6 +144,8 @@ section{
     height: 100%;
     border-right: 2px solid var(--main-color);
     z-index: -1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
 
 }
 
@@ -646,7 +656,7 @@ span{
 #menu-icon .animate,
 .home.show-animate .animate{
     animation: showRight 1s ease forwards;
-    animation-delay: calc(.3s*var(--i));
+    animation-delay: calc(.3s * var(--i));
 }
 
 .animate.scroll{
@@ -708,7 +718,7 @@ section:nth-child(odd) .animate.scroll{
     .navbar{
         position: absolute;
         top: 100%;
-        left: 0;
+        left: -100%;
         width:100%;
         padding: 1rem 4%;
         background: var(--main-color);
@@ -719,8 +729,9 @@ section:nth-child(odd) .animate.scroll{
     }
 
     .navbar.active{
-        left: 0;
         transition-delay: 0s;
+        left: 0;
+
     }
 
     .navbar .active-nav{
@@ -737,8 +748,9 @@ section:nth-child(odd) .animate.scroll{
     }
 
     .navbar.active .active-nav{
-        left: 0;
         transition-delay: .25s;
+        left: 0;
+
     }
 
 

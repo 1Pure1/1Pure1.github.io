@@ -4,7 +4,7 @@ let navbar=document.querySelector('.navbar');
 
 menuIcon.onclick = () =>{
     menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('activ');
+    navbar.classList.toggle('active');
 
 }
 
@@ -16,11 +16,11 @@ let navLinks=document.querySelectorAll('header nav a');
 window.onscroll = () =>{
     sections.forEach(sec=>{
         let top=window.scrollY;
-        let offset=sec.offsetTop-100;
+        let offset=sec.offsetTop - 100;
         let height=sec.offsetHeight;
         let id=sec.getAttribute('id');
 
-        if(top >= offset && top<offset+height){
+        if(top >= offset && top < offset + height) {
             //active navbar links
             navLinks.forEach(links=>{
                 links.classList.remove('active');
@@ -43,5 +43,5 @@ window.onscroll = () =>{
 
     //remove toggle icon and navbar when click navbar links(scroll)
     menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('activ');
+    navbar.classList.remove('active');
 }
