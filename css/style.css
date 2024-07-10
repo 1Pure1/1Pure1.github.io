@@ -854,22 +854,29 @@ section:nth-child(odd) .animate.scroll{
     }
 
 }
+
 .projects {
     min-height: auto;
     padding-bottom: 7rem;
     background: var(--second-bg-color);
+    text-align: center;
 }
 
 .projects h2 {
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
+    color: var(--text-color);
+}
+
+.projects h2 span {
+    color: var(--main-color);
 }
 
 .slideshow-container {
     position: relative;
     max-width: 70rem;
-    margin: auto;
+    margin: 2rem auto;
 }
 
 .mySlides {
@@ -887,8 +894,6 @@ section:nth-child(odd) .animate.scroll{
     transition: transform 0.3s, box-shadow 0.3s;
     max-width: 600px;
     margin: 2rem auto;
-    transform: translateX(-100%);
-    opacity: 0;
 }
 
 .project-content:hover {
@@ -971,38 +976,19 @@ section:nth-child(odd) .animate.scroll{
 }
 
 .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-}
-
-.animate.scroll {
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.show-animate .animate.scroll {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.projects.show-animate .animate.scroll {
-    animation: showRight 1s ease forwards;
-    animation-delay: calc(.3s * var(--i));
-}
-
-@keyframes showRight {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }
 
