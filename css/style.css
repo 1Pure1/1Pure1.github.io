@@ -70,16 +70,17 @@ body {
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color); /* Change text color for active link */
+    position: relative; /* Ensure position is relative for pseudo-element */
 }
 
 .navbar a.active::before {
     content: '';
     position: absolute;
-    bottom: -0.2rem; /* Adjust as needed */
+    bottom: -5px; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
-    width: 2rem;
-    height: 2rem;
+    width: 10px;
+    height: 3px;
     background-color: var(--main-color); /* Background color for active link */
     z-index: -1;
     border-radius: 0.2rem;
