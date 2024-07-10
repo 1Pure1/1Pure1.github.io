@@ -71,6 +71,12 @@ body{
     color: var(--main-color);
 }
 
+.navbar a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
 #menu-icon{
     position: relative;
     font-size: 3.6rem;
