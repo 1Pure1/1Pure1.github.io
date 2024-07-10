@@ -70,7 +70,6 @@ body {
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color); /* Change text color for active link */
-
 }
 
 .navbar a.active::before {
