@@ -930,8 +930,8 @@ section:nth-child(odd) .animate.scroll{
     cursor: pointer;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     width: auto;
-    margin-top: -22px;
     padding: 16px;
     color: var(--text-color);
     font-weight: bold;
