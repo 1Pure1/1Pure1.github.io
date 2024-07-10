@@ -861,26 +861,18 @@ section:nth-child(odd) .animate.scroll{
     min-height: auto;
     padding-bottom: 7rem;
     background: var(--second-bg-color);
-    text-align: center; /* Center the content */
 }
 
 .projects h2 {
-    color: var(--text-color);
-    text-align: center; /* Center the heading */
-}
-
-.projects h2 span {
-    color: var(--main-color);
-}
-
-.projects h2 span:first-child {
-    color: var(--text-color); /* Ensure the "My" part is white */
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .slideshow-container {
     position: relative;
     max-width: 70rem;
-    margin: 2rem auto;
+    margin: auto;
 }
 
 .mySlides {
@@ -995,4 +987,5 @@ section:nth-child(odd) .animate.scroll{
     from {opacity: .4}
     to {opacity: 1}
 }
+
 
