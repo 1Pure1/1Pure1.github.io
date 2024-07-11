@@ -791,4 +791,14 @@ span {
     .navbar a {
         padding: 1rem;
     }
+
+    .home-sci {
+        /* Adjust styles for smaller screens */
+        margin-bottom: 2rem; /* Example: Adjust as needed */
+    }
+
+    .btn-box {
+        /* Adjust styles for smaller screens */
+        margin-top: 2rem; /* Example: Adjust as needed */
+    }
 }
