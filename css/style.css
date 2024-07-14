@@ -90,16 +90,23 @@ section {
 
 .home {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
     padding: 0 9%;
-    /*background: url('/images/Ronen11.jpg') no-repeat */
-    background-size: cover;
-    background-position: center;
+    min-height: 100vh; /* Full height */
+    text-align: center; /* Center text in all child elements */
 }
+
 
 .home-content {
     max-width: 60rem;
+    text-align: center; /* Center-align text inside home-content */
     z-index: 99;
+}
+
+.home-content h3 {
+    margin: 0; /* Remove margin if needed */
 }
 
 .home-content h1 {
@@ -118,6 +125,15 @@ section {
     position: relative;
     width: 32.8rem;
 }
+
+.text-animate {
+    display: flex;               /* Use flexbox */
+    justify-content: center;     /* Center items horizontally */
+    align-items: center;         /* Center items vertically, if needed */
+    text-align: center;          /* Ensure text is centered */
+    margin: 0 auto;              /* Center the div itself */
+}
+
 
 .home-content .text-animate h3 {
     font-size: 3.2rem;
@@ -159,7 +175,10 @@ section {
     position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
+    text-align: center; /* Center text within the paragraph */
+    max-width: 600px; /* Optional: Limit the width for better readability */
 }
+
 
 .btn-box {
     position: relative;
@@ -707,33 +726,105 @@ span {
 }
 
 .footer {
+    background-color: var(--footer-bg-color); /* Set footer background color */
+    padding: 2rem 0; /* Padding for the footer */
+    text-align: center; /* Center-align text */
+}
+
+.footer-content h3 {
+    margin-bottom: 1rem; /* Space below heading */
+    color: var(--main-color); /* Heading color */
+}
+
+.footer-content p {
+    margin-bottom: 1.5rem; /* Space below paragraph */
+    color: var(--text-color); /* Paragraph color */
+}
+
+.footer-content .contact-info {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin-bottom: 1.5rem; /* Space below contact info */
+}
+
+.footer-content .contact-info li {
+    margin: 0.5rem 0; /* Space between list items */
+    color: var(--text-color); /* List item color */
+}
+
+.footer {
+    text-align: center; /* Center text in footer */
+}
+
+.footer-content {
+    max-width: 800px; /* Set max width for content */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 1rem; /* Add padding */
+}
+
+.footer-sci {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 9%;
-    background: var(--bg-color);
-    border-top: .1rem solid rgba(255, 255, 255, .1);
+    justify-content: center; /* Center the icons */
+    gap: 1rem; /* Space between icons */
+    margin-top: 1rem; /* Add some space above */
 }
 
-.footer span {
+.footer-sci a {
     position: relative;
-    font-size: 1.6rem;
-}
-
-.footer .top {
-    position: fixed;
-    right: 2rem;
-    bottom: 6rem;
-    font-size: 4rem;
+    display: flex; /* Changed to flex */
+    justify-content: center; /* Centering content */
+    align-items: center; /* Centering content */
+    width: 30px; /* Adjusted width */
+    height: 30px; /* Adjusted height */
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 16px; /* Adjusted font size */
     color: var(--main-color);
-    z-index: 1000;
-    cursor: pointer;
-    display: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
 }
 
-.footer .top.active {
-    display: block;
+.footer-sci a:hover {
+    color: var(--bg-color);
 }
+
+.footer-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.footer-sci a:hover::before {
+    width: 100%;
+}
+
+/* Additional styling for the phone link */
+.footer-sci-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; /* Match size with other icons */
+    height: 30px; /* Match size with other icons */
+    color: var(--main-color);
+    transition: color 0.3s; /* Optional: add a hover effect */
+}
+
+.footer-sci-icon:hover {
+    color: var(--bg-color); /* Change color on hover */
+}
+
+
+
+
+
 
 /* keyframes */
 
